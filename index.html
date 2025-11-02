@@ -52,18 +52,22 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="bg-blue-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all">
                             <h3 class="text-xl font-semibold text-blue-800 mb-3">Butuh Bicara?</h3>
+                            <p class="text-gray-600 mb-4">Mulai obrolan anonim dengan konselor kami.</p>
                             <button class="nav-link-button w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700" data-page="chat">Mulai Chat</button>
                         </div>
                         <div class="bg-green-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all">
                             <h3 class="text-xl font-semibold text-green-800 mb-3">Atur Janji Temu</h3>
+                            <p class="text-gray-600 mb-4">Buat jadwal konseling tatap muka atau online.</p>
                             <button class="nav-link-button w-full bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700" data-page="jadwal">Buat Jadwal</button>
                         </div>
                         <div class="bg-yellow-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all">
                             <h3 class="text-xl font-semibold text-yellow-800 mb-3">Baca Artikel</h3>
+                            <p class="text-gray-600 mb-4">Dapatkan motivasi dan tips kesehatan mental.</p>
                             <button class="nav-link-button w-full bg-yellow-500 text-white py-2 px-4 rounded-lg font-medium hover:bg-yellow-600" data-page="artikel">Lihat Artikel</button>
                         </div>
                         <div class="bg-red-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all">
                             <h3 class="text-xl font-semibold text-red-800 mb-3">Ada Masalah?</h3>
+                            <p class="text-gray-600 mb-4">Laporkan insiden (mis. bullying) secara anonim.</p>
                             <button class="nav-link-button w-full bg-red-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-red-700" data-page="lapor">Lapor Sekarang</button>
                         </div>
                     </div>
@@ -124,8 +128,8 @@
                                 <div>
                                     <label for="jadwal-konselor" class="block text-sm font-medium text-gray-700">Pilih Konselor</label>
                                     <select id="jadwal-konselor" name="konselor" class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 bg-white focus:ring-green-500 focus:border-green-500">
-                                        <option>Fahmy Zulfikar Ridwan</option>
-                                        <option>Siti Nurjannah Haryansah Aza</option>
+                                        <option>Pak Fahmy Zulfikar Ridwan</option>
+                                        <option>Ibu Siti Nurjannah Haryansah Aza</option>
                                         <option>Siapapun yang tersedia</option>
                                     </select>
                                 </div>
@@ -241,11 +245,9 @@
 /*
   PENTING:
   - SCRIPT_URL sudah diisi berdasarkan Apps Script yang kamu kirim.
-  - Jika ingin tombol "Lihat Data" membuka Google Sheets langsung, ganti SPREADSHEET_URL
-    dengan URL spreadsheet Google Sheets-mu (contoh: https://docs.google.com/spreadsheets/d/ID_SPREADSHEET/edit).
 */
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyTHZplLZnRG_7KK65nJwzRkw5QdCttNhvmwwHz8duPQbS1O9upY3D3Bfasdmqh18DX/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby4r1Nc9EOEh7hLSzOL285ufpbAbRBgqk6ktTziKl2DcPfbGQAvRg_VUue-CGATMfRz/exec";
 
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -355,17 +357,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Lihat data buttons
-    function openSheetOrAlert() {
-        if (SPREADSHEET_URL && !SPREADSHEET_URL.includes('PASTE_SPREADSHEET_URL_HERE')) {
-            window.open(SPREADSHEET_URL, '_blank');
-        } else {
-            alert('Untuk membuka Google Sheets, silakan ganti variabel SPREADSHEET_URL dalam file HTML dengan URL spreadsheet Anda.');
-        }
-    }
-    
+    // Bagian "Lihat data buttons" dan fungsi openSheetOrAlert() sudah dihapus.
 
 });
 </script>
+
 </body>
 </html>
